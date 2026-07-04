@@ -1,4 +1,4 @@
-name: Build Theia
+name: Compile Theia
 
 on: [push]
 
@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Compile Lexer
-        run: gcc lexer.c -o theia
-      - name: Run Test
-        run: ./theia
+      - name: Compile
+        run: |
+          gcc lexer.c -o theia
+          ./theia
