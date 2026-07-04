@@ -1,0 +1,13 @@
+name: Build Theia
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Compile Lexer
+        run: gcc lexer.c -o theia
+      - name: Run Test
+        run: ./theia
