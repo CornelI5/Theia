@@ -1,11 +1,16 @@
+/*
+ * Theia Compiler v0.1 - Memory Management
+ * Licensed under MIT License
+ */
 #ifndef MEMORY_H
 #define MEMORY_H
 
-#include <stdlib.h>
+#include <stddef.h>
 
-/* Macro to capture file and line information for debugging */
-#define SAFE_MALLOC(x) safe_malloc_impl(((x)), __FILE__, __LINE__)
 
 void *safe_malloc_impl(size_t size, const char *file, int line);
+
+
+#define SAFE_MALLOC(size) safe_malloc_impl((size), __FILE__, __LINE__)
 
 #endif
