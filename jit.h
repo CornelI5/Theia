@@ -2,7 +2,6 @@
 #define JIT_H
 #include <stdint.h>
 
-// Struktur buat nampung instruksi mesin yang bakal kita inject
 typedef struct {
     void *exec_mem;
     size_t size;
